@@ -56,7 +56,7 @@ public:
     }
 };
 
-/*
+
 	f(N, arg1, arg2, arg3)
 	arg1: total problems coded by 'Person V' modulo K 		[0 -> (K - 1)]
 	arg2: whether 'Person J' coded N-th problem or not 		[0 or 1]
@@ -75,7 +75,7 @@ public:
 
 		f(N - 1, arg1, arg2, 1 - arg3) +		<-- 'Person K' coded N-th problem
 		f(N - 1, arg1, arg2, arg3)
-*/
+
 int main()
 {
     int TC;
@@ -129,6 +129,6 @@ int main()
         for (int a = 0; a < 2; a++)
             ans = (ans + T.val[0][stateMap[0][a][1]]) % MOD;
 
-        //printf("%lld\n", ans);
+        printf("%lld\n", ans);
     }
 }
